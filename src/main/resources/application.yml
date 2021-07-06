@@ -1,0 +1,15 @@
+server:
+  port: 5000
+  
+logging:  level:    com.test.product.ProductClient: DEBUG
+    
+feign:
+  client:
+    config:
+      default:
+        error-decoder: com.test.product.config.FeignClientErrorDecoder 
+        connectTimeout: 6000
+        readTimeout: 1000
+        loggerLevel: basic
+
+
